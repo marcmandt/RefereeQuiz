@@ -11,12 +11,13 @@ public class ShowQuestionActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_show_question);
 
-        if (!QuizQuestionCollection.isInitialized()){
-            QuizQuestionCollection.doInitialization();
+        if (loadNextQuestion()){
+            displayQuestion();
         }
-        if (QuizQuestionCollection.hasNext()){
-            currentQuestion = QuizQuestionCollection.getNext();
-        }
+    }
+
+    private void displayQuestion(){
+
     }
 
     private boolean loadNextQuestion(){
@@ -30,6 +31,7 @@ public class ShowQuestionActivity extends AppCompatActivity {
             currentQuestion = QuizQuestionCollection.getNext();
             loaded = true;
         }
+
         return loaded;
     }
 }
