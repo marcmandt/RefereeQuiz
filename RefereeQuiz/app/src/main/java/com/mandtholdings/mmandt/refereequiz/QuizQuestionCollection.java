@@ -24,7 +24,8 @@ public class QuizQuestionCollection {
         quizQst.addAnswer("Yes, correct call.");
         quizQst.addAnswer("No, incorrect call.");
         quizQst.setMediaURL("tnVYMHIRWjg");
-        quizQst.setCorrectIndex(0);
+        quizQst.setCorrectIndex(1);
+        quizQst.setAnswerExplanation("No. Incorrect Call.");
         questions.add(quizQst);
         //#2
         quizQst = new QuizQuestion();
@@ -33,6 +34,7 @@ public class QuizQuestionCollection {
         quizQst.addAnswer("Green");
         quizQst.setMediaURL("pDMnTnXZDi8");
         quizQst.setCorrectIndex(0);
+        quizQst.setAnswerExplanation("White");
         questions.add(quizQst);
         //#3
         quizQst = new QuizQuestion();
@@ -40,7 +42,8 @@ public class QuizQuestionCollection {
         quizQst.addAnswer("Yes");
         quizQst.addAnswer("No");
         quizQst.setMediaURL("tPd7OClUFQ0");
-        quizQst.setCorrectIndex(0);
+        quizQst.setCorrectIndex(1);
+        quizQst.setAnswerExplanation("No");
         questions.add(quizQst);
         //#4
         quizQst = new QuizQuestion();
@@ -48,8 +51,10 @@ public class QuizQuestionCollection {
         quizQst.addAnswer("Basket interference");
         quizQst.addAnswer("Goaltending");
         quizQst.addAnswer("Unintentional. Therefore Legal. Play On.");
-        quizQst.setMediaURL("un5baS36lTk?t=4");
+        quizQst.setMediaURL("un5baS36lTk");
+        quizQst.setMediaStartSeconds(4);
         quizQst.setCorrectIndex(0);
+        quizQst.setAnswerExplanation("Basket interference");
         questions.add(quizQst);
         //#5
         quizQst = new QuizQuestion();
@@ -57,7 +62,8 @@ public class QuizQuestionCollection {
         quizQst.addAnswer("No. The player traveled first.");
         quizQst.addAnswer("Yes. The player did not travel first. Held ball is correct.");
         quizQst.setMediaURL("txZsPSYzfp4");
-        quizQst.setCorrectIndex(0);
+        quizQst.setCorrectIndex(1);
+        quizQst.setAnswerExplanation("Yes. The player did not travel first. Held ball is correct.");
         questions.add(quizQst);
         //#6
         quizQst = new QuizQuestion();
@@ -67,57 +73,69 @@ public class QuizQuestionCollection {
         quizQst.addAnswer("Defensive Foul");
         quizQst.addAnswer("Offensive Foul");
         quizQst.setMediaURL("knhJscdEZXY");
-        quizQst.setCorrectIndex(0);
+        quizQst.setCorrectIndex(2);
+        quizQst.setAnswerExplanation("Offensive Foul");
         questions.add(quizQst);
 
         //#7
         quizQst = new QuizQuestion();
         quizQst.setQuestion("The Center official calls a travel violation. Is this a correct call?");
         quizQst.addAnswer("No. Should be a held ball");
-        quizQst.addAnswer("Yes.  Travelling is correct");
+        quizQst.addAnswer("Yes. Travelling is correct");
         quizQst.addAnswer("No. Should be a defensive foul");
         quizQst.setMediaURL("5s3pXvL9d_A");
-        quizQst.setCorrectIndex(0);
+        quizQst.setCorrectIndex(1);
+        quizQst.setAnswerExplanation("Yes. Travelling is correct");
         questions.add(quizQst);
         //#8
         quizQst = new QuizQuestion();
         quizQst.setQuestion("This is a clear block or charge?");
         quizQst.addAnswer("Block");
         quizQst.addAnswer("Charge");
-        quizQst.setMediaURL("ZA-sFktqBhw?t=22");
-        quizQst.setCorrectIndex(0);
+        quizQst.setMediaURL("ZA-sFktqBhw");
+        quizQst.setMediaStartSeconds(22);
+        quizQst.setCorrectIndex(1);
+        quizQst.setAnswerExplanation("Charge");
         questions.add(quizQst);
         //#9
         quizQst = new QuizQuestion();
         quizQst.setQuestion("Backcourt violation or legal play?");
         quizQst.addAnswer("Backcourt violation");
         quizQst.addAnswer("Legal Play");
-        quizQst.setMediaURL("HiQ3-f1xeao?t=22");
+        quizQst.setMediaURL("HiQ3-f1xeao");
+        quizQst.setMediaStartSeconds(22);
         quizQst.setCorrectIndex(0);
+        quizQst.setAnswerExplanation("Backcourt violation");
         questions.add(quizQst);
         //#10
         quizQst = new QuizQuestion();
         quizQst.setQuestion("Is this footwork legal?");
         quizQst.addAnswer("No. This is traveling");
         quizQst.addAnswer("Yes. Legal play");
-        quizQst.setMediaURL("li_jbe2wm1Y?t=22");
-        quizQst.setCorrectIndex(0);
+        quizQst.setMediaURL("li_jbe2wm1Y");
+        quizQst.setMediaStartSeconds(22);
+        quizQst.setCorrectIndex(1);
+        quizQst.setAnswerExplanation("Yes. Legal play");
         questions.add(quizQst);
         //#11
         quizQst = new QuizQuestion();
         quizQst.setQuestion("Player passes back to a teammate in the backcourt. Legal play?");
         quizQst.addAnswer("Yes. Legal.");
         quizQst.addAnswer("No. Illegal backcourt violation.");
-        quizQst.setMediaURL("gTSJaEexx9o?t=22");
+        quizQst.setMediaURL("gTSJaEexx9o");
+        quizQst.setMediaStartSeconds(22);
         quizQst.setCorrectIndex(0);
+        quizQst.setAnswerExplanation("Yes. Legal.");
         questions.add(quizQst);
         //#12
         quizQst = new QuizQuestion();
         quizQst.setQuestion("Above the rim action. Is this play legal?");
         quizQst.addAnswer("Yes. This is legal.");
         quizQst.addAnswer("No. This is a violation");
-        quizQst.setMediaURL("G0BcuJga8Fs?t=22");
-        quizQst.setCorrectIndex(0);
+        quizQst.setMediaURL("G0BcuJga8Fs");
+        quizQst.setMediaStartSeconds(22);
+        quizQst.setCorrectIndex(1);
+        quizQst.setAnswerExplanation("No. This is a violation");
         questions.add(quizQst);
         //#13
         quizQst = new QuizQuestion();
@@ -125,32 +143,40 @@ public class QuizQuestionCollection {
         quizQst.addAnswer("Lane violation only. Re-shoot the free throw.");
         quizQst.addAnswer("Goaltending only. Count the 1 point, shoot the next shot.");
         quizQst.addAnswer("Technical foul");
-        quizQst.setMediaURL("YSaYhQouxN8?t=28");
-        quizQst.setCorrectIndex(0);
+        quizQst.setMediaURL("YSaYhQouxN8");
+        quizQst.setMediaStartSeconds(28);
+        quizQst.setCorrectIndex(2);
+        quizQst.setAnswerExplanation("Technical foul");
         questions.add(quizQst);
         //#14
         quizQst = new QuizQuestion();
         quizQst.setQuestion("Last second shot of the half, is this a shooting foul or not?");
         quizQst.addAnswer("Yes. Shooting foul.");
         quizQst.addAnswer("No. Not a shooting foul.");
-        quizQst.setMediaURL("QfC0iCkFlf0?t=5");
+        quizQst.setMediaURL("QfC0iCkFlf0");
+        quizQst.setMediaStartSeconds(5);
         quizQst.setCorrectIndex(0);
+        quizQst.setAnswerExplanation("Yes. Shooting foul.");
         questions.add(quizQst);
         //#15
         quizQst = new QuizQuestion();
         quizQst.setQuestion("The official ruled the screen by Yellow #40 to be legal. Is he correct?");
         quizQst.addAnswer("No. This is an illegal screen.");
         quizQst.addAnswer("Yes. This screen is legal.");
-        quizQst.setMediaURL("dgShsCgzKTQ?t=69");
+        quizQst.setMediaURL("dgShsCgzKTQ");
+        quizQst.setMediaStartSeconds(69);
         quizQst.setCorrectIndex(0);
+        quizQst.setAnswerExplanation("No. This is an illegal screen.");
         questions.add(quizQst);
         //#16
         quizQst = new QuizQuestion();
         quizQst.setQuestion("Does the dribbler violate and go backcourt?");
         quizQst.addAnswer("Yes. Both feet and ball were in the frontcourt.");
         quizQst.addAnswer("No. Both feet and the ball were not in the frontcourt.");
-        quizQst.setMediaURL("Z3lJi96rHHw?t=22");
-        quizQst.setCorrectIndex(0);
+        quizQst.setMediaURL("Z3lJi96rHHw");
+        quizQst.setMediaStartSeconds(22);
+        quizQst.setCorrectIndex(1);
+        quizQst.setAnswerExplanation("No. Both feet and the ball were not in the frontcourt.");
         questions.add(quizQst);
         //#17
         quizQst = new QuizQuestion();
@@ -159,24 +185,30 @@ public class QuizQuestionCollection {
         quizQst.addAnswer("B");
         quizQst.addAnswer("C");
         quizQst.addAnswer("D");
-        quizQst.setMediaURL("YSH3yfvDwmw?t=22");
-        quizQst.setCorrectIndex(0);
+        quizQst.setMediaURL("YSH3yfvDwmw");
+        quizQst.setMediaStartSeconds(22);
+        quizQst.setCorrectIndex(2);
+        quizQst.setAnswerExplanation("C");
         questions.add(quizQst);
         //#18
         quizQst = new QuizQuestion();
         quizQst.setQuestion("Is this a backcourt violation?");
         quizQst.addAnswer("Yes. Violation.");
         quizQst.addAnswer("No. Legal Play");
-        quizQst.setMediaURL("f7e5O5lPiCs?t=22");
+        quizQst.setMediaURL("f7e5O5lPiCs");
+        quizQst.setMediaStartSeconds(22);
         quizQst.setCorrectIndex(0);
+        quizQst.setAnswerExplanation("Yes. Violation.");
         questions.add(quizQst);
         //#19
         quizQst = new QuizQuestion();
         quizQst.setQuestion("A1 completes a throw-in to A2. Does A2 violate?");
         quizQst.addAnswer("Yes");
         quizQst.addAnswer("No");
-        quizQst.setMediaURL("pyjVidF45P0?t=22");
-        quizQst.setCorrectIndex(0);
+        quizQst.setMediaURL("pyjVidF45P0");
+        quizQst.setMediaStartSeconds(22);
+        quizQst.setCorrectIndex(1);
+        quizQst.setAnswerExplanation("No");
         questions.add(quizQst);
         //#20
         quizQst = new QuizQuestion();
@@ -184,7 +216,9 @@ public class QuizQuestionCollection {
         quizQst.addAnswer("Yes. Shot was blocked before contact. Ignore the contact.");
         quizQst.addAnswer("No. This should be a foul. Too much contact to ignore");
         quizQst.setMediaURL("aC0tbzn8IE4?t=12");
-        quizQst.setCorrectIndex(0);
+        quizQst.setMediaStartSeconds(12);
+        quizQst.setCorrectIndex(1);
+        quizQst.setAnswerExplanation("No. This should be a foul. Too much contact to ignore");
         questions.add(quizQst);
     }
 

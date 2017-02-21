@@ -2,6 +2,7 @@ package com.mandtholdings.mmandt.refereequiz;
 
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -53,7 +54,8 @@ public class ShowQuestionActivity extends AppCompatActivity {
 
     private void displayAnswerOptions(){
         answerGroup.setVisibility(View.VISIBLE);
-        videoButton.setVisibility(View.GONE);
+        videoButton.setVisibility(View.VISIBLE);
+        videoButton.setText(R.string.rewatch_video_button);
         AnswerOption answerOption = null;
         RadioGroup.LayoutParams rprms;
 
@@ -94,6 +96,10 @@ public class ShowQuestionActivity extends AppCompatActivity {
                 if (state == 0){
                     displayQuestion();
                     displayAnswerOptions();
+                }else if (state == 3){
+                    if (videoView.getVisibility() == View.VISIBLE){
+                        videoView.playVideo();
+                    }
                 }
                 Log.d("STATE:", state + "");
             }
@@ -108,7 +114,9 @@ public class ShowQuestionActivity extends AppCompatActivity {
     }
 
     public void showAnswer(boolean isCorrect) {
-       Log.d("IS_CORRECT:", ""+isCorrect);
+        currentQuestion.setAnsweredCorrect(isCorrect);
+        Intent intent = new Intent(this,ShowAnswerActivity.class);
+        startActivity(intent);
     }
 
     public class AnswerOption extends RadioButton{

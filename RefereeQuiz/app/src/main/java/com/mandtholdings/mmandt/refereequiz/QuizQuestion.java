@@ -11,6 +11,9 @@ public class QuizQuestion {
     private ArrayList<String> answers = new ArrayList<String>();
     private int correctIndex;
     private String mediaURL;
+    private int mediaStartSeconds = 0;
+    private boolean answeredCorrect = false;
+    private String answerExplanation = null;
 
     public String getQuestion() {
         return question;
@@ -46,5 +49,29 @@ public class QuizQuestion {
 
     public void setMediaURL(String mediaURL) {
         this.mediaURL = mediaURL;
+    }
+
+    public boolean isAnsweredCorrect() {
+        return answeredCorrect;
+    }
+
+    public void setAnsweredCorrect(boolean answeredCorrect) {
+        this.answeredCorrect = answeredCorrect;
+    }
+
+    public String getAnswerExplanation() {
+        return answerExplanation;
+    }
+
+    public void setAnswerExplanation(String answerExplanation) {
+        this.answerExplanation = answerExplanation;
+    }
+
+    public int getMediaStartSeconds() {
+        return mediaStartSeconds;
+    }
+
+    public void setMediaStartSeconds(int mediaStartSeconds) {
+        this.mediaStartSeconds = mediaStartSeconds;
     }
 }
