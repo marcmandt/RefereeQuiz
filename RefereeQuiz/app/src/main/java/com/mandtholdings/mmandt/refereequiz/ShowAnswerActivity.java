@@ -11,7 +11,6 @@ import android.widget.TextView;
 
 public class ShowAnswerActivity extends AppCompatActivity {
 
-    boolean isCorrect = false;
     TextView answerText = null;
     TextView isCorrectText = null;
     QuizQuestion currQuestion = null;
@@ -28,7 +27,7 @@ public class ShowAnswerActivity extends AppCompatActivity {
     }
 
     private void showAnswer(){
-        if (isCorrect){
+        if (currQuestion.isAnsweredCorrect()){
             isCorrectText.setText("Correct!");
             isCorrectText.setTextColor(Color.parseColor("#006400"));
         }else{
