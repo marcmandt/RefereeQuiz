@@ -22,6 +22,7 @@ public class ShowQuestionActivity extends AppCompatActivity {
     TextView questionTitle = null;
     Button videoButton = null;
     RadioGroup answerGroup = null;
+    boolean loadedAnswers = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,12 +60,14 @@ public class ShowQuestionActivity extends AppCompatActivity {
         AnswerOption answerOption = null;
         RadioGroup.LayoutParams rprms;
 
-        for(int i = 0; i < currentQuestion.getAnswers().size(); i++){
-            answerOption = new AnswerOption(this, currentQuestion.getAnswers().get(i), i == currentQuestion.getCorrectIndex());
-            rprms = new RadioGroup.LayoutParams(RadioGroup.LayoutParams.WRAP_CONTENT, RadioGroup.LayoutParams.WRAP_CONTENT);
-            answerGroup.addView(answerOption,rprms);
+        if (!loadedAnswers) {
+            for (int i = 0; i < currentQuestion.getAnswers().size(); i++) {
+                answerOption = new AnswerOption(this, currentQuestion.getAnswers().get(i), i == currentQuestion.getCorrectIndex());
+                rprms = new RadioGroup.LayoutParams(RadioGroup.LayoutParams.WRAP_CONTENT, RadioGroup.LayoutParams.WRAP_CONTENT);
+                answerGroup.addView(answerOption, rprms);
+            }
+            loadedAnswers = true;
         }
-
     }
 
     private boolean loadNextQuestion(){
@@ -99,6 +102,7 @@ public class ShowQuestionActivity extends AppCompatActivity {
                 }else if (state == 3){
                     if (videoView.getVisibility() == View.VISIBLE){
                         videoView.playVideo();
+                        videoView.seekTo(currentQuestion.getMediaStartSeconds());
                     }
                 }
                 Log.d("STATE:", state + "");
@@ -111,6 +115,7 @@ public class ShowQuestionActivity extends AppCompatActivity {
         questionTitle.setVisibility(View.GONE);
         videoButton.setVisibility(View.GONE);
         videoView.playVideo();
+        videoView.seekTo(currentQuestion.getMediaStartSeconds());
     }
 
     public void showAnswer(boolean isCorrect) {
