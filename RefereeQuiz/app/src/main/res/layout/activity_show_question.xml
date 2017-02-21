@@ -14,6 +14,35 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/questionTitle"
+        android:textSize="24sp"
+        android:paddingBottom="24sp"
         />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/questionTitle"
+        android:id="@+id/videoButton"
+        android:text="@string/show_video_button"
+        android:onClick="showVideoPressed"
+        />
+
+    <com.pierfrancescosoffritti.youtubeplayer.YouTubePlayerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:id="@+id/questionVideo"/>
+
+
+    <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/questionTitle"
+        android:visibility="gone"
+        android:orientation="vertical"
+        android:id="@+id/answerGroup">
+
+    </RadioGroup>
+
 
 </RelativeLayout>
